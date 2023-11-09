@@ -40,6 +40,7 @@ function MobileMenu({
               exit="initial"
               onClick={menuToggler}
               onKeyDown={menuToggler}
+              className="cursor-pointer"
             >
               <FiX color="white" size={22} />
             </motion.div>
