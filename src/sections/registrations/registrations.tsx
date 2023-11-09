@@ -3,9 +3,11 @@ import MainEvent from "../../assets/images/Main Event.svg";
 import SupportEvent from "../../assets/images/SupportEvent.svg";
 import { sportCategories } from "../../data/data";
 
-function Registrations() {
+function Registrations({
+  bottomToggler,
+}: Readonly<{ bottomToggler: () => void }>) {
   return (
-    <div className="mt-28  relative">
+    <div className="mt-28 pt-12 relative" id="registration">
       <h2 className="text-white text-center font-medium text-xl mb-8">
         Registrations Started
       </h2>
@@ -87,7 +89,15 @@ function Registrations() {
           </section>
         </div>
         <div className="flex justify-center mb-5">
-          <div className=" bg-gradient-to-r from-teal-500 to-indigo-800 shadow-lg   py-4 px-5">
+          <div
+            className=" bg-gradient-to-r from-teal-500 to-indigo-800 shadow-lg py-4 px-5 cursor-pointer"
+            onClick={() => {
+              bottomToggler();
+            }}
+            onKeyDown={() => {
+              bottomToggler();
+            }}
+          >
             <div className="text-white text-xs font-medium flex flex-row items-center ">
               Register Now &nbsp; &nbsp; <FiArrowRight />
             </div>
