@@ -11,3 +11,7 @@
   display: inline-block;
   animation: 35s slide infinite linear;
 }
+
+option {
+  font-family: inherit !important;
+}
