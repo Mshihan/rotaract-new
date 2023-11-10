@@ -10,24 +10,52 @@ interface SportCategories {
   title: string;
 }
 
-interface StepOneFields {
+export interface StepOneFields {
   organization: string;
-  firstName: string;
+  clubName: string;
   playingCategory: string;
   captainName: string;
   captainPhone: string;
   captainNic: string;
   captainEmail: string;
+  playerFiveName: string;
+  playerFiveNic: string;
+  playerTwoName: string;
+  playerTwoNic: string;
+  playerThreeName: string;
+  playerThreeNic: string;
+  playerFourName: string;
+  playerFourNic: string;
+  substituteOneName: string;
+  substituteOneNic: string;
+  substituteTwoName: string;
+  substituteTwoNic: string;
+  substituteThreeName: string;
+  substituteThreeNic: string;
 }
 
 export const InitialFormData: StepOneFields = {
   organization: "",
-  firstName: "",
+  clubName: "",
   playingCategory: "",
   captainName: "",
   captainPhone: "",
   captainNic: "",
   captainEmail: "",
+  playerFiveName: "",
+  playerFiveNic: "",
+  playerTwoName: "",
+  playerTwoNic: "",
+  playerThreeName: "",
+  playerThreeNic: "",
+  playerFourName: "",
+  playerFourNic: "",
+  substituteOneName: "",
+  substituteOneNic: "",
+  substituteTwoName: "",
+  substituteTwoNic: "",
+  substituteThreeName: "",
+  substituteThreeNic: "",
 };
 
 export const navLinks: Array<NavLink> = [

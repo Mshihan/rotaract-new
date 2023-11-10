@@ -8,6 +8,7 @@ import MobileMenu from "./components/mobile_menu/mobile_menu";
 import SlidingStrip from "./components/sliding_strip/sliding_strip";
 import Registrations from "./sections/registrations/registrations";
 import BottomSheet from "./components/bottom_sheet/bottom_sheet";
+import Footer from "./sections/footer/footer";
 
 function App() {
   const [menuState, setMenuState] = useState<boolean>(false);
@@ -19,6 +20,7 @@ function App() {
   const bottomToggler = () => {
     setBottomState((state) => !state);
   };
+
   return (
     <div
       className="relative w-screen  overflow-x-hidden"
@@ -48,7 +50,7 @@ function App() {
       <Landing />
       <SlidingStrip />
       <Registrations bottomToggler={bottomToggler} />
-
+      <Footer />
       <BottomSheet bottomState={bottomState} bottomToggler={bottomToggler} />
     </div>
   );
