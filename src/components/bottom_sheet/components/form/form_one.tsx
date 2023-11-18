@@ -23,12 +23,65 @@ function FormOne({
   });
   return (
     <>
-      <section className="">
-        <h4 className="text-[13px] font-normal leading-relaxed">
-          Organization and captain details
-        </h4>
-        <p className="text-[#AFAFAF] text-[11px] ">Step 1/4</p>
+      <section className="flex flex-row lg:mb-8 lg:hidden">
+        <div className="w-10 h-10 bg-[#4BB4BB] rounded-full flex justify-center items-center mr-4">
+          <div className="w-6 h-6 bg-white rounded-full" />
+        </div>
+        <div className="">
+          <h4 className="text-[13px] font-normal leading-relaxed">
+            Organization and captain details
+          </h4>
+          <p className="text-[#AFAFAF] text-[11px] ">Step 1/4</p>
+        </div>
       </section>
+
+      <div className="hidden grid-cols-4 lg:grid gap-5">
+        <section className="flex flex-row lg:mb-8 ">
+          <div className="w-10 h-10 bg-[#4BB4BB] rounded-full flex justify-center items-center mr-4">
+            <div className="w-6 h-6 bg-white rounded-full" />
+          </div>
+          <div className="">
+            <h4 className="text-[13px] font-normal leading-relaxed">
+              Organization and captain details
+            </h4>
+            <p className="text-[#AFAFAF] text-[11px] ">Step 1/4</p>
+          </div>
+        </section>
+
+        <section className="flex flex-row lg:mb-8 ">
+          <div className="w-10 h-10 bg-[#5E636A] rounded-full flex justify-center items-center mr-4">
+            <div className="w-6 h-6 bg-white rounded-full" />
+          </div>
+          <div className="">
+            <h4 className="text-[13px] font-normal leading-relaxed">
+              Player Details
+            </h4>
+            <p className="text-[#AFAFAF] text-[11px] ">Step 2/4</p>
+          </div>
+        </section>
+        <section className="flex flex-row lg:mb-8">
+          <div className="w-10 h-10 bg-[#5E636A] rounded-full flex justify-center items-center mr-4">
+            <div className="w-6 h-6 bg-white rounded-full" />
+          </div>
+          <div className="">
+            <h4 className="text-[13px] font-normal leading-relaxed">
+              Substitute Players
+            </h4>
+            <p className="text-[#AFAFAF] text-[11px] ">Step 3/4</p>
+          </div>
+        </section>
+        <section className="flex flex-row lg:mb-8">
+          <div className="w-10 h-10 bg-[#5E636A] rounded-full flex justify-center items-center mr-4">
+            <div className="w-6 h-6 bg-white rounded-full" />
+          </div>
+          <div className="">
+            <h4 className="text-[13px] font-normal leading-relaxed">
+              Preview and Payment
+            </h4>
+            <p className="text-[#AFAFAF] text-[11px] ">Step 4/4</p>
+          </div>
+        </section>
+      </div>
       <Formik
         initialValues={formData}
         onSubmit={(values) => {
@@ -39,9 +92,9 @@ function FormOne({
       >
         {() => (
           <Form className="mt-5">
-            <div className="min-h-[70vh]">
+            <div className="md:min-h-[70vh] lg:min-h-[400px]">
               {/* Organizational Data */}
-              <section className="mb-5">
+              <section className="mb-5 lg:grid lg:grid-cols-3  lg:gap-3 md:grid-cols-1 md:gap-0">
                 <div className="mb-2">
                   <Field
                     as="select"
@@ -107,7 +160,7 @@ function FormOne({
                 </h4>
               </section>
 
-              <section className="mb-3">
+              <section className="mb-3 lg:grid lg:grid-cols-3 lg:gap-3">
                 <div className="mb-2">
                   <Field
                     type="text"
@@ -168,18 +221,17 @@ function FormOne({
                     name="captainEmail"
                     component="span"
                   />
+                  <p className="text-[12px] text-[#B5B5B5] mt-2">
+                    Please use an active email. This mail used to send you the
+                    booking confirmations
+                  </p>
                 </div>
-
-                <p className="text-[12px] text-[#B5B5B5]">
-                  Please use an active email. This mail used to send you the
-                  booking confirmations
-                </p>
               </section>
             </div>
 
             <button
               type="submit"
-              className=" bg-gradient-to-r from-teal-500 to-indigo-800 shadow-lg py-2 px-4 cursor-pointer text-white float-right flex flex-row items-center rounded-lg"
+              className=" bg-gradient-to-r from-teal-500 to-indigo-800 shadow-lg py-2 px-4 cursor-pointer text-white float-right flex flex-row items-center rounded-lg lg:mt-5"
             >
               Next &nbsp;
               <FiArrowRight color="white" />

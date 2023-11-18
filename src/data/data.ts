@@ -105,6 +105,42 @@ export const bannerText: Array<BannerItem> = [
   {
     title: ".",
   },
+  {
+    title: "Register Now",
+  },
+  {
+    title: ".",
+  },
+  {
+    title: "Secure  your slot",
+  },
+  {
+    title: ".",
+  },
+  {
+    title: "TBL Basketball",
+  },
+  {
+    title: ".",
+  },
+  {
+    title: "Register Now",
+  },
+  {
+    title: ".",
+  },
+  {
+    title: "Secure  your slot",
+  },
+  {
+    title: ".",
+  },
+  {
+    title: "TBL Basketball",
+  },
+  {
+    title: ".",
+  },
 ];
 
 export const sportCategories: Array<SportCategories> = [

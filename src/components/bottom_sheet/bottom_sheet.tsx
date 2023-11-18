@@ -29,10 +29,10 @@ function BottomSheet({
           onClick={() => {}}
           className="bg-black bg-opacity-40 h-screen w-screen absolute bottom-0 left-0 origin-bottom flex flex-col justify-end"
         >
-          <div className="bg-[#353945] z-50 w-screen  h-[97vh] overflow-y-scroll  px-5 py-8 rounded-t-xl transition-all duration-300 ease-in">
+          <div className="bg-[#353945] z-50 w-screen lg:h-[700px] h-[97vh] overflow-y-scroll  px-5 py-8 rounded-t-xl transition-all duration-300 ease-in">
             <div className="text-white">
-              <div className="flex flex-row justify-between items-center mb-2">
-                <h2 className="text-[18px] font-medium">
+              <div className="flex flex-row justify-between items-center mb-2 ">
+                <h2 className="text-[18px] font-medium  md:text-[20px] md:leading-relaxed lg:text-[22px] xl:text-[28px] lg:mb-3">
                   Get Your Self Registered
                 </h2>
                 <FiX

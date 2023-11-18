@@ -9,6 +9,7 @@ import SlidingStrip from "./components/sliding_strip/sliding_strip";
 import Registrations from "./sections/registrations/registrations";
 import BottomSheet from "./components/bottom_sheet/bottom_sheet";
 import Footer from "./sections/footer/footer";
+import { floatingEvent } from "./data/data";
 
 function App() {
   const [menuState, setMenuState] = useState<boolean>(false);
@@ -29,19 +30,35 @@ function App() {
         height: menuState ? "100vh" : "auto",
       }}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto ">
         <div className="flex flex-row px-10 items-center justify-between">
           <img
             src={BrandLogo}
             alt="brand logo"
-            className="p-0 w-1/2 max-w-[200px] min-w-[150px]"
+            className="p-0 w-1/2 sm:max-w-[200px] sm:min-w-[150px]"
           />
           <div
             onClick={menuToggler}
             onKeyDown={menuToggler}
-            className="cursor-pointer"
+            className="cursor-pointer md:hidden"
           >
             <FiMenu color="white" size={22} />
+          </div>
+
+          <div
+            className="text-white border-2 border-white px-3 py-2 hover:bg-white  hover:text-[#191c23] duration-500 hover:scale-105 cursor-pointer md:block sm:hidden "
+            onClick={() =>
+              document
+                .getElementById("registration")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            onKeyDown={() =>
+              document
+                .getElementById("registration")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            {floatingEvent}
           </div>
         </div>
       </div>
