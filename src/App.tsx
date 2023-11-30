@@ -46,7 +46,7 @@ function App() {
           </div>
 
           <div
-            className="text-white border-2 border-white px-3 py-2 hover:bg-white  hover:text-[#191c23] duration-500 hover:scale-105 cursor-pointer md:block sm:hidden "
+            className="text-white border-2 border-white px-3 py-2 hover:bg-white  hover:text-[#191c23] duration-500 hover:scale-105 cursor-pointer md:block hidden "
             onClick={() =>
               document
                 .getElementById("registration")
