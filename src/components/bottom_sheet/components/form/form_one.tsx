@@ -1,5 +1,5 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiEdit, FiX } from "react-icons/fi";
 import { StepOneFields } from "../../../../data/data";
 import * as Yup from "yup";
 
@@ -29,7 +29,7 @@ function FormOne({
         </div>
         <div className="">
           <h4 className="text-[13px] font-normal leading-relaxed">
-            Organization and captain details
+            Organization and Event Details
           </h4>
           <p className="text-[#AFAFAF] text-[11px] ">Step 1/4</p>
         </div>
@@ -42,13 +42,13 @@ function FormOne({
           </div>
           <div className="">
             <h4 className="text-[13px] font-normal leading-relaxed">
-              Organization and captain details
+              Organization and Event Details
             </h4>
             <p className="text-[#AFAFAF] text-[11px] ">Step 1/4</p>
           </div>
         </section>
 
-        <section className="flex flex-row lg:mb-8 ">
+        {/* <section className="flex flex-row lg:mb-8 ">
           <div className="w-10 h-10 bg-[#5E636A] rounded-full flex justify-center items-center mr-4">
             <div className="w-6 h-6 bg-white rounded-full" />
           </div>
@@ -69,7 +69,7 @@ function FormOne({
             </h4>
             <p className="text-[#AFAFAF] text-[11px] ">Step 3/4</p>
           </div>
-        </section>
+        </section> */}
         <section className="flex flex-row lg:mb-8">
           <div className="w-10 h-10 bg-[#5E636A] rounded-full flex justify-center items-center mr-4">
             <div className="w-6 h-6 bg-white rounded-full" />
@@ -78,7 +78,7 @@ function FormOne({
             <h4 className="text-[13px] font-normal leading-relaxed">
               Preview and Payment
             </h4>
-            <p className="text-[#AFAFAF] text-[11px] ">Step 4/4</p>
+            <p className="text-[#AFAFAF] text-[11px] ">Step 1/4</p>
           </div>
         </section>
       </div>
@@ -86,7 +86,7 @@ function FormOne({
         initialValues={formData}
         onSubmit={(values) => {
           handleSubmit(values);
-          setTimeout(() => handleSelectedStep(1), 300);
+          // setTimeout(() => handleSelectedStep(1), 300);
         }}
         validationSchema={formValidationSchema}
       >
@@ -155,12 +155,65 @@ function FormOne({
 
               {/* Captain Data */}
               <section className="mb-3">
-                <h4 className="text-[13px] font-normal leading-relaxed">
-                  Captain Details
+                <h4 className="text-[18px] font-normal leading-relaxed">
+                  Event Details
                 </h4>
               </section>
 
-              <section className="mb-3 lg:grid lg:grid-cols-3 lg:gap-3">
+              <h5 className="text-[15px] font-normal leading-relaxed mb-3">
+                Individual Events
+              </h5>
+              <div className="flex flex-row gap-2 flex-wrap mb-4">
+                <div
+                  className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg"
+                  onClick={() => handleSelectedStep(1)}
+                >
+                  100m Sprint <FiArrowRight />
+                </div>
+                <div className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  200m Sprint <FiArrowRight />
+                </div>
+                <div className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-cyan-500 to-green-500 rounded-lg">
+                  <FiEdit /> 400m Sprint <FiX />
+                </div>
+                <div className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  800m Sprint <FiArrowRight />
+                </div>
+                <div className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  Long Jump <FiArrowRight />
+                </div>
+                <div className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  High Jump <FiArrowRight />
+                </div>
+                <div className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  Putt Shot <FiArrowRight />
+                </div>
+              </div>
+
+              <h5 className="text-[15px] font-normal leading-relaxed mb-3">
+                Group Events
+              </h5>
+              <div className="flex flex-row gap-2 flex-wrap">
+                <div className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  100m x 4 <FiArrowRight />
+                </div>
+                <div className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  200m x 4 <FiArrowRight />
+                </div>
+                <div className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  100m x 4 Mixed Relay <FiArrowRight />
+                </div>
+                <div className="bg-slate-300 px-3 py-1 flex flex-row items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  Tug of War <FiArrowRight />
+                </div>
+              </div>
+
+              <p className="text-[12px] text-[#B5B5B5] mt-2">
+                Please use an active email. This mail used to send you the
+                booking confirmations
+              </p>
+
+              {/* <section className="mb-3 lg:grid lg:grid-cols-3 lg:gap-3">
                 <div className="mb-2">
                   <Field
                     type="text"
@@ -226,16 +279,16 @@ function FormOne({
                     booking confirmations
                   </p>
                 </div>
-              </section>
+              </section> */}
             </div>
 
-            <button
+            {/* <button
               type="submit"
               className=" bg-gradient-to-r from-teal-500 to-indigo-800 shadow-lg py-2 px-4 cursor-pointer text-white float-right flex flex-row items-center rounded-lg lg:mt-5"
             >
               Next &nbsp;
               <FiArrowRight color="white" />
-            </button>
+            </button> */}
           </Form>
         )}
       </Formik>

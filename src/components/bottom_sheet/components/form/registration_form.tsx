@@ -4,8 +4,8 @@ import { formVariants } from "../../../../animations/form_variants";
 import { StepOneFields } from "../../../../data/data";
 import FormOne from "./form_one";
 import FormTwo from "./form_two";
-import FormThree from "./form_three";
-import FormFour from "./form_four";
+// import FormThree from "./form_three";
+// import FormFour from "./form_four";
 
 function RegistrationForm({
   formData,
@@ -52,7 +52,7 @@ function RegistrationForm({
           />
         </motion.div>
       )}
-
+      {/* 
       {selectedStep === 2 && (
         <motion.div
           key={"form_three"}
@@ -82,7 +82,7 @@ function RegistrationForm({
             handleSelectedStep={handleSelectedStep}
           />
         </motion.div>
-      )}
+      )} */}
     </AnimatePresence>
   );
 }
