@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { FiX } from "react-icons/fi";
 import { bottomVariants } from "../../animations/bottom_sheet_varients";
-import { InitialFormData, StepOneFields } from "../../data/data";
+import { GroupEventInterface, initialGroupFormData } from "../../data/data";
 import RegistrationForm from "./components/form/registration_form";
 
 function BottomSheet({
@@ -12,13 +12,12 @@ function BottomSheet({
   bottomState: boolean;
   bottomToggler: () => void;
 }>) {
-  const handleSubmit = (values: StepOneFields) => {
+  const handleSubmit = (values: GroupEventInterface) => {
     setFormData({ ...formData, ...values });
   };
 
-  const [formData, setFormData] = useState<StepOneFields>(InitialFormData);
-
-  console.log(formData);
+  const [formData, setFormData] =
+    useState<GroupEventInterface>(initialGroupFormData);
 
   return (
     <AnimatePresence>
@@ -35,7 +34,7 @@ function BottomSheet({
             <div className="text-white">
               <div className="flex flex-row justify-between items-center mb-2 ">
                 <h2 className="text-[18px] font-medium  md:text-[20px] md:leading-relaxed lg:text-[22px] xl:text-[28px] lg:mb-3">
-                  Individual Events
+                  Group Events
                 </h2>
                 <FiX
                   className="cursor-pointer"

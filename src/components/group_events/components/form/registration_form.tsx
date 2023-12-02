@@ -2,8 +2,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { formVariants } from "../../../../animations/form_variants";
 import {
-  IndividualEventsInterface,
-  StepOneFields,
+  GroupEventInterface,
+  GroupEventsInterface,
+  groupEvents,
   individualEvents,
 } from "../../../../data/data";
 import FormOne from "./form_one";
@@ -15,22 +16,22 @@ function RegistrationForm({
   formData,
   handleSubmit,
 }: Readonly<{
-  formData: StepOneFields;
-  handleSubmit: (values: StepOneFields) => void;
+  formData: GroupEventInterface;
+  handleSubmit: (values: GroupEventInterface) => void;
 }>) {
   const [selectedStep, setSelectedStep] = useState<number>(0);
   const handleSelectedStep = (step: number) => {
     setSelectedStep(step);
   };
 
-  const [individualEventSubmit, setIndividualEventSubmit] =
-    useState<IndividualEventsInterface>(individualEvents);
+  const [groupEventSubmit, setGroupEventSubmit] =
+    useState<GroupEventsInterface>(groupEvents);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const changeIndividualEvents = (key: any, state: boolean) => {
-    const tempState = { ...individualEventSubmit };
+  const changeGroupEvents = (key: any, state: boolean) => {
+    const tempState = { ...groupEventSubmit };
     tempState[key] = state;
-    setIndividualEventSubmit(tempState);
+    setGroupEventSubmit(tempState);
   };
 
   return (
@@ -47,8 +48,8 @@ function RegistrationForm({
             formData={formData}
             handleSubmit={handleSubmit}
             handleSelectedStep={handleSelectedStep}
-            individualEventSubmit={individualEventSubmit}
-            changeIndividualEvents={changeIndividualEvents}
+            groupEventSubmit={groupEventSubmit}
+            changeGroupEvents={changeGroupEvents}
           />
         </motion.div>
       )}

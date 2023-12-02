@@ -30,10 +30,10 @@ function FormTwo({
         </div>
         <div className="">
           <h4 className="text-[13px] font-normal leading-relaxed">
-            100m Sprint
+            100m x 4 Sprint
           </h4>
           <p className="text-[#AFAFAF] text-[11px] ">
-            Please fill your details
+            Please fill players details
           </p>
         </div>
       </section>
@@ -45,10 +45,10 @@ function FormTwo({
           </div>
           <div className="">
             <h4 className="text-[13px] font-normal leading-relaxed">
-              Player Details
+              100m x 4 Sprint
             </h4>
             <p className="text-[#AFAFAF] text-[11px] ">
-              Please fill your details
+              Please fill players details
             </p>
           </div>
         </section>

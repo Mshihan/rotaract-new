@@ -8,6 +8,7 @@ import MobileMenu from "./components/mobile_menu/mobile_menu";
 import SlidingStrip from "./components/sliding_strip/sliding_strip";
 import Registrations from "./sections/registrations/registrations";
 import BottomSheet from "./components/bottom_sheet/bottom_sheet";
+import BottomSheetGroup from "./components/group_events/bottom_sheet";
 import Footer from "./sections/footer/footer";
 import { floatingEvent } from "./data/data";
 
@@ -68,7 +69,11 @@ function App() {
       <SlidingStrip />
       <Registrations bottomToggler={bottomToggler} />
       <Footer />
-      <BottomSheet bottomState={bottomState} bottomToggler={bottomToggler} />
+      {/* <BottomSheet bottomState={bottomState} bottomToggler={bottomToggler} /> */}
+      <BottomSheetGroup
+        bottomState={bottomState}
+        bottomToggler={bottomToggler}
+      />
     </div>
   );
 }

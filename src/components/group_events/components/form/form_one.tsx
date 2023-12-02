@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { FiArrowRight, FiEdit, FiX } from "react-icons/fi";
 import {
-  IndividualEventsInterface,
-  StepOneFields,
+  GroupEventInterface,
+  GroupEventsInterface,
 } from "../../../../data/data";
 import * as Yup from "yup";
 import { MdCreditCard } from "react-icons/md";
@@ -11,14 +12,14 @@ function FormOne({
   formData,
   handleSubmit,
   handleSelectedStep,
-  individualEventSubmit,
-  changeIndividualEvents,
+  groupEventSubmit,
+  changeGroupEvents,
 }: Readonly<{
-  formData: StepOneFields;
-  handleSubmit: (values: StepOneFields) => void;
+  formData: GroupEventInterface;
+  handleSubmit: (values: GroupEventInterface) => void;
   handleSelectedStep: (value: number) => void;
-  individualEventSubmit: IndividualEventsInterface;
-  changeIndividualEvents: (key: any, value: boolean) => void;
+  groupEventSubmit: GroupEventsInterface;
+  changeGroupEvents: (key: any, value: boolean) => void;
 }>) {
   const formValidationSchema = Yup.object({
     organization: Yup.string().required().label("Organization"),
@@ -140,7 +141,7 @@ function FormOne({
                   />
                 </div>
               </section>
-              <section className="mb-3">
+              {/* <section className="mb-3">
                 <h4 className="text-[18px] font-normal leading-relaxed mb-2 flex flex-row items-center gap-5">
                   Player Details{" "}
                   <FiEdit
@@ -190,7 +191,7 @@ function FormOne({
                     Enter Player Details <FiArrowRight color="white" />
                   </button>
                 )}
-              </section>
+              </section> */}
 
               {/* Captain Data */}
               <section className="mb-3">
@@ -201,28 +202,28 @@ function FormOne({
               <div className="flex flex-row gap-2 flex-wrap mb-2">
                 <div
                   className={`flex flex-row items-center gap-3 bg-gradient-to-r ${
-                    individualEventSubmit.S_100
+                    groupEventSubmit.G_100_4
                       ? " from-cyan-500 to-green-500"
                       : "from-blue-500 to-purple-500"
                   } rounded-lg  px-3 py-1`}
                 >
                   <div
                     className={` cursor-pointer  `}
-                    onClick={() => changeIndividualEvents("S_100", true)}
+                    onClick={() => handleSelectedStep(1)}
                   >
-                    100m Sprint{" "}
+                    100m x 4 Sprint{" "}
                   </div>
 
-                  {individualEventSubmit.S_100 && (
-                    <FiX
-                      onClick={() => changeIndividualEvents("S_100", false)}
-                    />
+                  {groupEventSubmit.G_100_4 && (
+                    <FiX onClick={() => changeGroupEvents("G_100_4", false)} />
                   )}
+
+                  {!groupEventSubmit.G_100_4 && <FiArrowRight />}
                 </div>
 
-                <div
+                {/* <div
                   className={`flex flex-row items-center gap-3 bg-gradient-to-r ${
-                    individualEventSubmit.S_200
+                    groupEventSubmit.S_200
                       ? " from-cyan-500 to-green-500"
                       : "from-blue-500 to-purple-500"
                   } rounded-lg  px-3 py-1`}
@@ -234,7 +235,7 @@ function FormOne({
                     200m Sprint{" "}
                   </div>
 
-                  {individualEventSubmit.S_200 && (
+                  {groupEventSubmit.S_200 && (
                     <FiX
                       onClick={() => changeIndividualEvents("S_200", false)}
                     />
@@ -243,7 +244,7 @@ function FormOne({
 
                 <div
                   className={`flex flex-row items-center gap-3 bg-gradient-to-r ${
-                    individualEventSubmit.S_400
+                    groupEventSubmit.S_400
                       ? " from-cyan-500 to-green-500"
                       : "from-blue-500 to-purple-500"
                   } rounded-lg  px-3 py-1`}
@@ -255,7 +256,7 @@ function FormOne({
                     400m Sprint{" "}
                   </div>
 
-                  {individualEventSubmit.S_400 && (
+                  {groupEventSubmit.S_400 && (
                     <FiX
                       onClick={() => changeIndividualEvents("S_400", false)}
                     />
@@ -264,7 +265,7 @@ function FormOne({
 
                 <div
                   className={`flex flex-row items-center gap-3 bg-gradient-to-r ${
-                    individualEventSubmit.S_800
+                    groupEventSubmit.S_800
                       ? " from-cyan-500 to-green-500"
                       : "from-blue-500 to-purple-500"
                   } rounded-lg  px-3 py-1`}
@@ -276,7 +277,7 @@ function FormOne({
                     800m Sprint{" "}
                   </div>
 
-                  {individualEventSubmit.S_800 && (
+                  {groupEventSubmit.S_800 && (
                     <FiX
                       onClick={() => changeIndividualEvents("S_800", false)}
                     />
@@ -285,7 +286,7 @@ function FormOne({
 
                 <div
                   className={`flex flex-row items-center gap-3 bg-gradient-to-r ${
-                    individualEventSubmit.Long_jump
+                    groupEventSubmit.Long_jump
                       ? " from-cyan-500 to-green-500"
                       : "from-blue-500 to-purple-500"
                   } rounded-lg  px-3 py-1`}
@@ -297,7 +298,7 @@ function FormOne({
                     Long Jump{" "}
                   </div>
 
-                  {individualEventSubmit.Long_jump && (
+                  {groupEventSubmit.Long_jump && (
                     <FiX
                       onClick={() => changeIndividualEvents("Long_jump", false)}
                     />
@@ -306,7 +307,7 @@ function FormOne({
 
                 <div
                   className={`flex flex-row items-center gap-3 bg-gradient-to-r ${
-                    individualEventSubmit.High_jump
+                    groupEventSubmit.High_jump
                       ? " from-cyan-500 to-green-500"
                       : "from-blue-500 to-purple-500"
                   } rounded-lg  px-3 py-1`}
@@ -318,7 +319,7 @@ function FormOne({
                     High Jump{" "}
                   </div>
 
-                  {individualEventSubmit.High_jump && (
+                  {groupEventSubmit.High_jump && (
                     <FiX
                       onClick={() => changeIndividualEvents("High_jump", false)}
                     />
@@ -327,7 +328,7 @@ function FormOne({
 
                 <div
                   className={`flex flex-row items-center gap-3 bg-gradient-to-r ${
-                    individualEventSubmit.Putt_shot
+                    groupEventSubmit.Putt_shot
                       ? " from-cyan-500 to-green-500"
                       : "from-blue-500 to-purple-500"
                   } rounded-lg  px-3 py-1`}
@@ -339,16 +340,16 @@ function FormOne({
                     Putt Shot{" "}
                   </div>
 
-                  {individualEventSubmit.Putt_shot && (
+                  {groupEventSubmit.Putt_shot && (
                     <FiX
                       onClick={() => changeIndividualEvents("Putt_shot", false)}
                     />
                   )}
-                </div>
+                </div> */}
               </div>
-              <p className="text-[12px]  mt-2 animate-pulse text-rose-100 mb-2">
+              {/* <p className="text-[12px]  mt-2 animate-pulse text-rose-100 mb-2">
                 One person can only enroll for three individual events.
-              </p>
+              </p> */}
             </div>
 
             {/* <button
