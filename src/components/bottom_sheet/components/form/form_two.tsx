@@ -132,20 +132,22 @@ function FormTwo({
                       />
                     </div>
 
-                    <div className="mb-2">
-                      <Field
-                        type="text"
-                        id="S_uni_id"
-                        name="S_uni_id"
-                        placeholder="University ID"
-                        className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                      />
-                      <ErrorMessage
-                        className="text-[10px] text-red-400 capitalize"
-                        name="S_uni_id"
-                        component="span"
-                      />
-                    </div>
+                    {formData.organization === "University" && (
+                      <div className="mb-2">
+                        <Field
+                          type="text"
+                          id="S_uni_id"
+                          name="S_uni_id"
+                          placeholder="University ID"
+                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                        />
+                        <ErrorMessage
+                          className="text-[10px] text-red-400 capitalize"
+                          name="S_uni_id"
+                          component="span"
+                        />
+                      </div>
+                    )}
                   </div>
                 </section>
               </div>

@@ -144,20 +144,22 @@ function FormThree({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player1_uni_id_200_4"
-                          name="player1_uni_id_200_4"
-                          placeholder="Player 1 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player1_uni_id_200_4"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player1_uni_id_200_4"
+                            name="player1_uni_id_200_4"
+                            placeholder="Player 1 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player1_uni_id_200_4"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -211,20 +213,22 @@ function FormThree({
                       />
                     </div> */}
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player2_uni_id_200_4"
-                          name="player2_uni_id_200_4"
-                          placeholder="Player 2 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player2_uni_id_200_4"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player2_uni_id_200_4"
+                            name="player2_uni_id_200_4"
+                            placeholder="Player 2 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player2_uni_id_200_4"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -263,20 +267,22 @@ function FormThree({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player3_uni_id_200_4"
-                          name="player3_uni_id_200_4"
-                          placeholder="Player 3 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player3_uni_id_200_4"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player3_uni_id_200_4"
+                            name="player3_uni_id_200_4"
+                            placeholder="Player 3 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player3_uni_id_200_4"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -315,20 +321,22 @@ function FormThree({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player4_uni_id_200_4"
-                          name="player4_uni_id_200_4"
-                          placeholder="Player 4 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player4_uni_id_200_4"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player4_uni_id_200_4"
+                            name="player4_uni_id_200_4"
+                            placeholder="Player 4 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player4_uni_id_200_4"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -367,20 +375,22 @@ function FormThree({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="sub_uni_id_200_4"
-                          name="sub_uni_id_200_4"
-                          placeholder="Sub Player University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="sub_uni_id_200_4"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="sub_uni_id_200_4"
+                            name="sub_uni_id_200_4"
+                            placeholder="Sub Player University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="sub_uni_id_200_4"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </section>

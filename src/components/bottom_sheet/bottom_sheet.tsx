@@ -33,8 +33,8 @@ function BottomSheet({
         >
           <div className="bg-[#353945] z-50 w-screen lg:h-[700px] h-[97vh] overflow-y-scroll  px-5 py-8 rounded-t-xl transition-all duration-300 ease-in">
             <div className="text-white">
-              <div className="flex flex-row justify-between items-center mb-2 ">
-                <h2 className="text-[18px] font-medium  md:text-[20px] md:leading-relaxed lg:text-[22px] xl:text-[28px] lg:mb-3">
+              <div className="flex flex-row justify-between items-center mb-2 lg:mb-5 ">
+                <h2 className="text-[18px] font-medium  md:text-[20px] md:leading-relaxed lg:text-[22px] xl:text-[28px] ">
                   Individual Events
                 </h2>
                 <FiX

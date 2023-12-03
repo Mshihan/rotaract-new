@@ -43,6 +43,7 @@ export const InitialFormData: StepOneFields = {
   S_nic: "",
   S_email: "",
   S_uni_id: "",
+
   // playerFiveNic: "",
   // playerTwoName: "",
   // playerTwoNic: "",

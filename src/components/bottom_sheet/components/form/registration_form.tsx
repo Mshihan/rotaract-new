@@ -31,7 +31,14 @@ function RegistrationForm({
     const tempState = { ...individualEventSubmit };
     const placeholder = key as keyof typeof individualEventSubmit;
     tempState[placeholder] = state;
+    // console.log(tempState);
     setIndividualEventSubmit(tempState);
+  };
+
+  const [eventsView, setEventsView] = useState<boolean>(false);
+
+  const setEventsViewHandler = (value: boolean) => {
+    setEventsView(value);
   };
 
   return (
@@ -46,9 +53,11 @@ function RegistrationForm({
         >
           <FormOne
             formData={formData}
+            eventsView={eventsView}
             handleSubmit={handleSubmit}
             handleSelectedStep={handleSelectedStep}
             individualEventSubmit={individualEventSubmit}
+            setEventsViewHandler={setEventsViewHandler}
             changeIndividualEvents={changeIndividualEvents}
           />
         </motion.div>

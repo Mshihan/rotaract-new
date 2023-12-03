@@ -29,11 +29,137 @@ function RegistrationForm({
   const [groupEventSubmit, setGroupEventSubmit] =
     useState<GroupEventsInterface>(groupEvents);
 
+  const [eventsView, setEventsView] = useState<boolean>(false);
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const changeGroupEvents = (key: any, state: boolean) => {
     const tempState = { ...groupEventSubmit };
-    tempState[key] = state;
+    const placeholder = key as keyof typeof groupEventSubmit;
+    tempState[placeholder] = state;
+    console.log({ placeholder, type: typeof placeholder });
+    if ("G_100_4" === placeholder && !state) {
+      const tempData = {
+        ...formData,
+        player1_name_100_4: "",
+        player1_phone_100_4: "",
+        player1_nic_100_4: "",
+        player1_email_100_4: "",
+        player1_uni_id_100_4: "",
+        player2_name_100_4: "",
+        player2_nic_100_4: "",
+        player2_uni_id_100_4: "",
+        player3_name_100_4: "",
+        player3_nic_100_4: "",
+        player3_uni_id_100_4: "",
+
+        player4_name_100_4: "",
+        player4_nic_100_4: "",
+        player4_uni_id_100_4: "",
+
+        sub_name_100_4: "",
+        sub_nic_100_4: "",
+        sub_uni_id_100_4: "",
+      };
+      handleSubmit(tempData);
+    } else if ("G_100_4_mix" === placeholder && !state) {
+      const tempData = {
+        ...formData,
+        player1_name_100_4_mix: "",
+        player1_phone_100_4_mix: "",
+        player1_nic_100_4_mix: "",
+        player1_email_100_4_mix: "",
+        player1_uni_id_100_4_mix: "",
+        player2_name_100_4_mix: "",
+        player2_nic_100_4_mix: "",
+        player2_uni_id_100_4_mix: "",
+        player3_name_100_4_mix: "",
+        player3_nic_100_4_mix: "",
+        player3_uni_id_100_4_mix: "",
+
+        player4_name_100_4_mix: "",
+        player4_nic_100_4_mix: "",
+        player4_uni_id_100_4_mix: "",
+
+        sub_name_100_4_mix: "",
+        sub_nic_100_4_mix: "",
+        sub_uni_id_100_4_mix: "",
+      };
+
+      handleSubmit(tempData);
+    } else if ("G_200_4" === placeholder && !state) {
+      const tempData = {
+        ...formData,
+        player1_name_200_4: "",
+        player1_phone_200_4: "",
+        player1_nic_200_4: "",
+        player1_email_200_4: "",
+        player1_uni_id_200_4: "",
+        player2_name_200_4: "",
+        player2_nic_200_4: "",
+        player2_uni_id_200_4: "",
+        player3_name_200_4: "",
+        player3_nic_200_4: "",
+        player3_uni_id_200_4: "",
+
+        player4_name_200_4: "",
+        player4_nic_200_4: "",
+        player4_uni_id_200_4: "",
+
+        sub_name_200_4: "",
+        sub_nic_200_4: "",
+        sub_uni_id_200_4: "",
+      };
+      handleSubmit(tempData);
+    } else if ("G_tug_of_war" === placeholder && !state) {
+      const tempData = {
+        ...formData,
+        player1_name_tug_of_war: "",
+        player1_phone_tug_of_war: "",
+        player1_nic_tug_of_war: "",
+        player1_email_tug_of_war: "",
+        player1_uni_id_tug_of_war: "",
+        player2_name_tug_of_war: "",
+        player2_nic_tug_of_war: "",
+        player2_uni_id_tug_of_war: "",
+        player3_name_tug_of_war: "",
+        player3_nic_tug_of_war: "",
+        player3_uni_id_tug_of_war: "",
+
+        player4_name_tug_of_war: "",
+        player4_nic_tug_of_war: "",
+        player4_uni_id_tug_of_war: "",
+
+        player5_name_tug_of_war: "",
+        player5_nic_tug_of_war: "",
+        player5_uni_id_tug_of_war: "",
+
+        player6_name_tug_of_war: "",
+        player6_nic_tug_of_war: "",
+        player6_uni_id_tug_of_war: "",
+
+        player7_name_tug_of_war: "",
+        player7_nic_tug_of_war: "",
+        player7_uni_id_tug_of_war: "",
+
+        player8_name_tug_of_war: "",
+        player8_nic_tug_of_war: "",
+        player8_uni_id_tug_of_war: "",
+
+        sub_1_name_tug_of_war: "",
+        sub_1_nic_tug_of_war: "",
+        sub_1_uni_id_tug_of_war: "",
+
+        sub_2_name_tug_of_war: "",
+        sub_2_nic_tug_of_war: "",
+        sub_2_uni_id_tug_of_war: "",
+      };
+      handleSubmit(tempData);
+    }
     setGroupEventSubmit(tempState);
+  };
+
+  const setEventsViewHandler = (value: boolean) => {
+    setEventsView(value);
   };
 
   return (
@@ -52,6 +178,8 @@ function RegistrationForm({
             handleSelectedStep={handleSelectedStep}
             groupEventSubmit={groupEventSubmit}
             changeGroupEvents={changeGroupEvents}
+            eventsView={eventsView}
+            setEventsViewHandler={setEventsViewHandler}
           />
         </motion.div>
       )}

@@ -159,20 +159,22 @@ function FormFive({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player1_uni_id_tug_of_war"
-                          name="player1_uni_id_tug_of_war"
-                          placeholder="Player 1 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player1_uni_id_tug_of_war"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player1_uni_id_tug_of_war"
+                            name="player1_uni_id_tug_of_war"
+                            placeholder="Player 1 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player1_uni_id_tug_of_war"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -226,20 +228,22 @@ function FormFive({
                       />
                     </div> */}
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player2_uni_id_tug_of_war"
-                          name="player2_uni_id_tug_of_war"
-                          placeholder="Player 2 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player2_uni_id_tug_of_war"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player2_uni_id_tug_of_war"
+                            name="player2_uni_id_tug_of_war"
+                            placeholder="Player 2 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player2_uni_id_tug_of_war"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -278,20 +282,22 @@ function FormFive({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player3_uni_id_tug_of_war"
-                          name="player3_uni_id_tug_of_war"
-                          placeholder="Player 3 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player3_uni_id_tug_of_war"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player3_uni_id_tug_of_war"
+                            name="player3_uni_id_tug_of_war"
+                            placeholder="Player 3 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player3_uni_id_tug_of_war"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -330,20 +336,22 @@ function FormFive({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player4_uni_id_tug_of_war"
-                          name="player4_uni_id_tug_of_war"
-                          placeholder="Player 4 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player4_uni_id_tug_of_war"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player4_uni_id_tug_of_war"
+                            name="player4_uni_id_tug_of_war"
+                            placeholder="Player 4 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player4_uni_id_tug_of_war"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -382,20 +390,22 @@ function FormFive({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player5_uni_id_tug_of_war"
-                          name="player5_uni_id_tug_of_war"
-                          placeholder="Player 5 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player5_uni_id_tug_of_war"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player5_uni_id_tug_of_war"
+                            name="player5_uni_id_tug_of_war"
+                            placeholder="Player 5 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player5_uni_id_tug_of_war"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -434,20 +444,22 @@ function FormFive({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player6_uni_id_tug_of_war"
-                          name="player6_uni_id_tug_of_war"
-                          placeholder="Player 6 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player6_uni_id_tug_of_war"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player6_uni_id_tug_of_war"
+                            name="player6_uni_id_tug_of_war"
+                            placeholder="Player 6 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player6_uni_id_tug_of_war"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -486,20 +498,22 @@ function FormFive({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player7_uni_id_tug_of_war"
-                          name="player7_uni_id_tug_of_war"
-                          placeholder="Player 7 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player7_uni_id_tug_of_war"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player7_uni_id_tug_of_war"
+                            name="player7_uni_id_tug_of_war"
+                            placeholder="Player 7 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player7_uni_id_tug_of_war"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -538,20 +552,22 @@ function FormFive({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="player8_uni_id_tug_of_war"
-                          name="player8_uni_id_tug_of_war"
-                          placeholder="Player 8 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="player8_uni_id_tug_of_war"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="player8_uni_id_tug_of_war"
+                            name="player8_uni_id_tug_of_war"
+                            placeholder="Player 8 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="player8_uni_id_tug_of_war"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -590,20 +606,22 @@ function FormFive({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="sub_1_uni_id_tug_of_war"
-                          name="sub_1_uni_id_tug_of_war"
-                          placeholder="Sub Player 1 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="sub_1_uni_id_tug_of_war"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="sub_1_uni_id_tug_of_war"
+                            name="sub_1_uni_id_tug_of_war"
+                            placeholder="Sub Player 1 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="sub_1_uni_id_tug_of_war"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -642,20 +660,22 @@ function FormFive({
                         />
                       </div>
 
-                      <div className="mb-2">
-                        <Field
-                          type="text"
-                          id="sub_2_uni_id_tug_of_war"
-                          name="sub_2_uni_id_tug_of_war"
-                          placeholder="Sub Player 2 University ID"
-                          className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
-                        />
-                        <ErrorMessage
-                          className="text-[10px] text-red-400 capitalize"
-                          name="sub_2_uni_id_tug_of_war"
-                          component="span"
-                        />
-                      </div>
+                      {formData.organization === "University" && (
+                        <div className="mb-2">
+                          <Field
+                            type="text"
+                            id="sub_2_uni_id_tug_of_war"
+                            name="sub_2_uni_id_tug_of_war"
+                            placeholder="Sub Player 2 University ID"
+                            className="outline-none w-[100%] border text-sm rounded-lg block  p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
+                          />
+                          <ErrorMessage
+                            className="text-[10px] text-red-400 capitalize"
+                            name="sub_2_uni_id_tug_of_war"
+                            component="span"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </section>
