@@ -29,7 +29,8 @@ function RegistrationForm({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const changeIndividualEvents = (key: any, state: boolean) => {
     const tempState = { ...individualEventSubmit };
-    tempState[key] = state;
+    const placeholder = key as keyof typeof individualEventSubmit;
+    tempState[placeholder] = state;
     setIndividualEventSubmit(tempState);
   };
 

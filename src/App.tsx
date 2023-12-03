@@ -15,12 +15,17 @@ import { floatingEvent } from "./data/data";
 function App() {
   const [menuState, setMenuState] = useState<boolean>(false);
   const [bottomState, setBottomState] = useState<boolean>(false);
+  const [bottomGroupState, setBottomGroupState] = useState<boolean>(false);
   const menuToggler = () => {
     setMenuState((state) => !state);
   };
 
   const bottomToggler = () => {
     setBottomState((state) => !state);
+  };
+
+  const bottomGroupToggler = () => {
+    setBottomGroupState((state) => !state);
   };
 
   return (
@@ -67,12 +72,15 @@ function App() {
       <FloatingEvent />
       <Landing />
       <SlidingStrip />
-      <Registrations bottomToggler={bottomToggler} />
-      <Footer />
-      {/* <BottomSheet bottomState={bottomState} bottomToggler={bottomToggler} /> */}
-      <BottomSheetGroup
-        bottomState={bottomState}
+      <Registrations
         bottomToggler={bottomToggler}
+        bottomGroupToggler={bottomGroupToggler}
+      />
+      <Footer />
+      <BottomSheet bottomState={bottomState} bottomToggler={bottomToggler} />
+      <BottomSheetGroup
+        bottomState={bottomGroupState}
+        bottomToggler={bottomGroupToggler}
       />
     </div>
   );

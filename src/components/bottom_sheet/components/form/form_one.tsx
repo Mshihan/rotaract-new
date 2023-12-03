@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { FiArrowRight, FiEdit, FiX } from "react-icons/fi";
 import {
@@ -6,6 +7,7 @@ import {
 } from "../../../../data/data";
 import * as Yup from "yup";
 import { MdCreditCard } from "react-icons/md";
+import { useState } from "react";
 
 function FormOne({
   formData,
@@ -29,6 +31,21 @@ function FormOne({
     // captainNic: Yup.string().required().label("Captain NIC"),
     // captainEmail: Yup.string().required().email().label("Captain Email"),
   });
+
+  const [Error, setError] = useState(false);
+
+  const handleEventSelection = (key: string, value: boolean) => {
+    if (
+      Object.values(individualEventSubmit).filter((value) => value === true)
+        .length < 3 ||
+      value === false
+    ) {
+      changeIndividualEvents(key, value);
+      setError(false);
+      return;
+    }
+    setError(true);
+  };
   return (
     <>
       <section className="flex flex-row lg:mb-8 lg:hidden">
@@ -208,15 +225,13 @@ function FormOne({
                 >
                   <div
                     className={` cursor-pointer  `}
-                    onClick={() => changeIndividualEvents("S_100", true)}
+                    onClick={() => handleEventSelection("S_100", true)}
                   >
                     100m Sprint{" "}
                   </div>
 
                   {individualEventSubmit.S_100 && (
-                    <FiX
-                      onClick={() => changeIndividualEvents("S_100", false)}
-                    />
+                    <FiX onClick={() => handleEventSelection("S_100", false)} />
                   )}
                 </div>
 
@@ -229,15 +244,13 @@ function FormOne({
                 >
                   <div
                     className={` cursor-pointer  `}
-                    onClick={() => changeIndividualEvents("S_200", true)}
+                    onClick={() => handleEventSelection("S_200", true)}
                   >
                     200m Sprint{" "}
                   </div>
 
                   {individualEventSubmit.S_200 && (
-                    <FiX
-                      onClick={() => changeIndividualEvents("S_200", false)}
-                    />
+                    <FiX onClick={() => handleEventSelection("S_200", false)} />
                   )}
                 </div>
 
@@ -250,15 +263,13 @@ function FormOne({
                 >
                   <div
                     className={` cursor-pointer  `}
-                    onClick={() => changeIndividualEvents("S_400", true)}
+                    onClick={() => handleEventSelection("S_400", true)}
                   >
                     400m Sprint{" "}
                   </div>
 
                   {individualEventSubmit.S_400 && (
-                    <FiX
-                      onClick={() => changeIndividualEvents("S_400", false)}
-                    />
+                    <FiX onClick={() => handleEventSelection("S_400", false)} />
                   )}
                 </div>
 
@@ -271,15 +282,13 @@ function FormOne({
                 >
                   <div
                     className={` cursor-pointer  `}
-                    onClick={() => changeIndividualEvents("S_800", true)}
+                    onClick={() => handleEventSelection("S_800", true)}
                   >
                     800m Sprint{" "}
                   </div>
 
                   {individualEventSubmit.S_800 && (
-                    <FiX
-                      onClick={() => changeIndividualEvents("S_800", false)}
-                    />
+                    <FiX onClick={() => handleEventSelection("S_800", false)} />
                   )}
                 </div>
 
@@ -292,14 +301,14 @@ function FormOne({
                 >
                   <div
                     className={` cursor-pointer  `}
-                    onClick={() => changeIndividualEvents("Long_jump", true)}
+                    onClick={() => handleEventSelection("Long_jump", true)}
                   >
                     Long Jump{" "}
                   </div>
 
                   {individualEventSubmit.Long_jump && (
                     <FiX
-                      onClick={() => changeIndividualEvents("Long_jump", false)}
+                      onClick={() => handleEventSelection("Long_jump", false)}
                     />
                   )}
                 </div>
@@ -313,14 +322,14 @@ function FormOne({
                 >
                   <div
                     className={` cursor-pointer  `}
-                    onClick={() => changeIndividualEvents("High_jump", true)}
+                    onClick={() => handleEventSelection("High_jump", true)}
                   >
                     High Jump{" "}
                   </div>
 
                   {individualEventSubmit.High_jump && (
                     <FiX
-                      onClick={() => changeIndividualEvents("High_jump", false)}
+                      onClick={() => handleEventSelection("High_jump", false)}
                     />
                   )}
                 </div>
@@ -334,21 +343,23 @@ function FormOne({
                 >
                   <div
                     className={` cursor-pointer  `}
-                    onClick={() => changeIndividualEvents("Putt_shot", true)}
+                    onClick={() => handleEventSelection("Putt_shot", true)}
                   >
                     Putt Shot{" "}
                   </div>
 
                   {individualEventSubmit.Putt_shot && (
                     <FiX
-                      onClick={() => changeIndividualEvents("Putt_shot", false)}
+                      onClick={() => handleEventSelection("Putt_shot", false)}
                     />
                   )}
                 </div>
               </div>
-              <p className="text-[12px]  mt-2 animate-pulse text-rose-100 mb-2">
-                One person can only enroll for three individual events.
-              </p>
+              {Error && (
+                <p className="text-[12px]  mt-3 animate-pulse text-rose-100 mb-2 bg-red-500 inline-block px-2 py-1 rounded-lg">
+                  One person can only enroll for three individual events.
+                </p>
+              )}
             </div>
 
             {/* <button

@@ -19,6 +19,8 @@ function BottomSheet({
   const [formData, setFormData] =
     useState<GroupEventInterface>(initialGroupFormData);
 
+  console.log(formData);
+
   return (
     <AnimatePresence>
       {bottomState && (

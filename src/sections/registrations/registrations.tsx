@@ -5,7 +5,8 @@ import { sportCategories } from "../../data/data";
 
 function Registrations({
   bottomToggler,
-}: Readonly<{ bottomToggler: () => void }>) {
+  bottomGroupToggler,
+}: Readonly<{ bottomToggler: () => void; bottomGroupToggler: () => void }>) {
   return (
     <div className="mt-28 pt-12 relative" id="registration">
       <h2 className="text-white text-center font-medium text-xl mb-8 md:text-[25px] md:leading-relaxed lg:text-[40px]">
@@ -148,7 +149,7 @@ function Registrations({
           </section>
         </div>
 
-        <div className="flex justify-center mb-10 mt-5">
+        <div className="flex justify-center mb-10 mt-5 gap-10">
           <div
             className=" bg-gradient-to-r from-teal-500 to-indigo-800 shadow-lg py-4 px-5 cursor-pointer"
             onClick={() => {
@@ -159,7 +160,21 @@ function Registrations({
             }}
           >
             <div className="text-white text-xs font-medium flex flex-row items-center md:text-[14px] lg:text-[15px] xl:text-[17px]">
-              Register Now &nbsp; &nbsp; <FiArrowRight />
+              Individual Events Registration &nbsp; &nbsp; <FiArrowRight />
+            </div>
+          </div>
+
+          <div
+            className=" bg-gradient-to-r from-teal-500 to-indigo-800 shadow-lg py-4 px-5 cursor-pointer"
+            onClick={() => {
+              bottomGroupToggler();
+            }}
+            onKeyDown={() => {
+              bottomGroupToggler();
+            }}
+          >
+            <div className="text-white text-xs font-medium flex flex-row items-center md:text-[14px] lg:text-[15px] xl:text-[17px]">
+              Group Event Registration &nbsp; &nbsp; <FiArrowRight />
             </div>
           </div>
         </div>

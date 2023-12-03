@@ -5,11 +5,13 @@ import {
   GroupEventInterface,
   GroupEventsInterface,
   groupEvents,
-  individualEvents,
+  // individualEvents,
 } from "../../../../data/data";
 import FormOne from "./form_one";
 import FormTwo from "./form_two";
-// import FormThree from "./form_three";
+import FormThree from "./form_three";
+import FormFour from "./form_four";
+import FormFive from "./form_five";
 // import FormFour from "./form_four";
 
 function RegistrationForm({
@@ -66,6 +68,58 @@ function RegistrationForm({
             formData={formData}
             handleSubmit={handleSubmit}
             handleSelectedStep={handleSelectedStep}
+            changeGroupEvents={changeGroupEvents}
+          />
+        </motion.div>
+      )}
+
+      {selectedStep === 2 && (
+        <motion.div
+          key={"form_three"}
+          variants={formVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          <FormThree
+            formData={formData}
+            handleSubmit={handleSubmit}
+            handleSelectedStep={handleSelectedStep}
+            changeGroupEvents={changeGroupEvents}
+          />
+        </motion.div>
+      )}
+
+      {selectedStep === 3 && (
+        <motion.div
+          key={"form_three"}
+          variants={formVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          <FormFour
+            formData={formData}
+            handleSubmit={handleSubmit}
+            handleSelectedStep={handleSelectedStep}
+            changeGroupEvents={changeGroupEvents}
+          />
+        </motion.div>
+      )}
+
+      {selectedStep === 4 && (
+        <motion.div
+          key={"form_three"}
+          variants={formVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          <FormFive
+            formData={formData}
+            handleSubmit={handleSubmit}
+            handleSelectedStep={handleSelectedStep}
+            changeGroupEvents={changeGroupEvents}
           />
         </motion.div>
       )}

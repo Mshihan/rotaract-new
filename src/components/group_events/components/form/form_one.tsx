@@ -141,59 +141,8 @@ function FormOne({
                   />
                 </div>
               </section>
-              {/* <section className="mb-3">
-                <h4 className="text-[18px] font-normal leading-relaxed mb-2 flex flex-row items-center gap-5">
-                  Player Details{" "}
-                  <FiEdit
-                    style={{ cursor: "pointer" }}
-                    onClick={() => handleSelectedStep(1)}
-                    onKeyDown={() => handleSelectedStep(1)}
-                  />
-                </h4>
 
-                {formData.S_name && (
-                  <p className="italic font-medium text-[12px] text-[#999999]">
-                    Name: {formData.S_name}
-                  </p>
-                )}
-
-                {formData.S_phone && (
-                  <p className="italic font-medium text-[12px] text-[#999999] ">
-                    Mobile Number: {formData.S_phone}
-                  </p>
-                )}
-
-                {formData.S_nic && (
-                  <p className="italic font-medium text-[12px] text-[#999999] ">
-                    NIC Number: {formData.S_nic}
-                  </p>
-                )}
-
-                {formData.S_email && (
-                  <p className="italic font-medium text-[12px] text-[#999999] ">
-                    Email: {formData.S_email}
-                  </p>
-                )}
-
-                {formData.S_uni_id && (
-                  <p className="italic font-medium text-[12px] text-[#999999] ">
-                    University ID: {formData.S_uni_id}
-                  </p>
-                )}
-
-                {!formData.S_name && (
-                  <button
-                    className=" bg-[#414c5e] text-white px-3 py-2 rounded-lg flex flex-row items-center gap-3"
-                    type="button"
-                    onClick={() => handleSelectedStep(1)}
-                    onKeyDown={() => handleSelectedStep(1)}
-                  >
-                    Enter Player Details <FiArrowRight color="white" />
-                  </button>
-                )}
-              </section> */}
-
-              {/* Captain Data */}
+              {/* Event Data */}
               <section className="mb-3">
                 <h4 className="text-[18px] font-normal leading-relaxed">
                   Event Details
@@ -208,9 +157,10 @@ function FormOne({
                   } rounded-lg  px-3 py-1`}
                 >
                   <div
-                    className={` cursor-pointer  `}
+                    className={` cursor-pointer flex flex-row gap-3 items-center `}
                     onClick={() => handleSelectedStep(1)}
                   >
+                    {groupEventSubmit.G_100_4 && <FiEdit />}
                     100m x 4 Sprint{" "}
                   </div>
 
@@ -219,6 +169,76 @@ function FormOne({
                   )}
 
                   {!groupEventSubmit.G_100_4 && <FiArrowRight />}
+                </div>
+
+                <div
+                  className={`flex flex-row items-center gap-3 bg-gradient-to-r ${
+                    groupEventSubmit.G_200_4
+                      ? " from-cyan-500 to-green-500"
+                      : "from-blue-500 to-purple-500"
+                  } rounded-lg  px-3 py-1`}
+                >
+                  <div
+                    className={` cursor-pointer flex flex-row gap-3 items-center `}
+                    onClick={() => handleSelectedStep(2)}
+                  >
+                    {groupEventSubmit.G_200_4 && <FiEdit />}
+                    200m x 4 Sprint{" "}
+                  </div>
+
+                  {groupEventSubmit.G_200_4 && (
+                    <FiX onClick={() => changeGroupEvents("G_200_4", false)} />
+                  )}
+
+                  {!groupEventSubmit.G_200_4 && <FiArrowRight />}
+                </div>
+
+                <div
+                  className={`flex flex-row items-center gap-3 bg-gradient-to-r ${
+                    groupEventSubmit.G_100_4_mix
+                      ? " from-cyan-500 to-green-500"
+                      : "from-blue-500 to-purple-500"
+                  } rounded-lg  px-3 py-1`}
+                >
+                  <div
+                    className={` cursor-pointer flex flex-row gap-3 items-center `}
+                    onClick={() => handleSelectedStep(3)}
+                  >
+                    {groupEventSubmit.G_100_4_mix && <FiEdit />}
+                    100m x 4 Mix Sprint{" "}
+                  </div>
+
+                  {groupEventSubmit.G_100_4_mix && (
+                    <FiX
+                      onClick={() => changeGroupEvents("G_100_4_mix", false)}
+                    />
+                  )}
+
+                  {!groupEventSubmit.G_100_4_mix && <FiArrowRight />}
+                </div>
+
+                <div
+                  className={`flex flex-row items-center gap-3 bg-gradient-to-r ${
+                    groupEventSubmit.G_tug_of_war
+                      ? " from-cyan-500 to-green-500"
+                      : "from-blue-500 to-purple-500"
+                  } rounded-lg  px-3 py-1`}
+                >
+                  <div
+                    className={` cursor-pointer flex flex-row gap-3 items-center `}
+                    onClick={() => handleSelectedStep(4)}
+                  >
+                    {groupEventSubmit.G_tug_of_war && <FiEdit />}
+                    Tug of War{" "}
+                  </div>
+
+                  {groupEventSubmit.G_tug_of_war && (
+                    <FiX
+                      onClick={() => changeGroupEvents("G_tug_of_war", false)}
+                    />
+                  )}
+
+                  {!groupEventSubmit.G_tug_of_war && <FiArrowRight />}
                 </div>
 
                 {/* <div

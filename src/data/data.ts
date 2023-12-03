@@ -65,27 +65,209 @@ export interface GroupEventInterface {
   player1_name_100_4: string;
   player1_phone_100_4: string;
   player1_nic_100_4: string;
+  player1_email_100_4: string;
+  player1_uni_id_100_4: string;
   player2_name_100_4: string;
   player2_nic_100_4: string;
+  player2_uni_id_100_4: string;
+
   player3_name_100_4: string;
   player3_nic_100_4: string;
+  player3_uni_id_100_4: string;
+
+  player4_name_100_4: string;
+  player4_nic_100_4: string;
+  player4_uni_id_100_4: string;
+
   sub_name_100_4: string;
   sub_nic_100_4: string;
+  sub_uni_id_100_4: string;
+
+  player1_name_200_4: string;
+  player1_phone_200_4: string;
+  player1_nic_200_4: string;
+  player1_email_200_4: string;
+  player1_uni_id_200_4: string;
+  player2_name_200_4: string;
+  player2_nic_200_4: string;
+  player2_uni_id_200_4: string;
+  player3_name_200_4: string;
+  player3_nic_200_4: string;
+  player3_uni_id_200_4: string;
+
+  player4_name_200_4: string;
+  player4_nic_200_4: string;
+  player4_uni_id_200_4: string;
+
+  sub_name_200_4: string;
+  sub_nic_200_4: string;
+  sub_uni_id_200_4: string;
+
+  player1_name_100_4_mix: string;
+  player1_phone_100_4_mix: string;
+  player1_nic_100_4_mix: string;
+  player1_email_100_4_mix: string;
+  player1_uni_id_100_4_mix: string;
+  player2_name_100_4_mix: string;
+  player2_nic_100_4_mix: string;
+  player2_uni_id_100_4_mix: string;
+  player3_name_100_4_mix: string;
+  player3_nic_100_4_mix: string;
+  player3_uni_id_100_4_mix: string;
+
+  player4_name_100_4_mix: string;
+  player4_nic_100_4_mix: string;
+  player4_uni_id_100_4_mix: string;
+
+  sub_name_100_4_mix: string;
+  sub_nic_100_4_mix: string;
+  sub_uni_id_100_4_mix: string;
+
+  player1_name_tug_of_war: string;
+  player1_phone_tug_of_war: string;
+  player1_nic_tug_of_war: string;
+  player1_email_tug_of_war: string;
+  player1_uni_id_tug_of_war: string;
+  player2_name_tug_of_war: string;
+  player2_nic_tug_of_war: string;
+  player2_uni_id_tug_of_war: string;
+  player3_name_tug_of_war: string;
+  player3_nic_tug_of_war: string;
+  player3_uni_id_tug_of_war: string;
+
+  player4_name_tug_of_war: string;
+  player4_nic_tug_of_war: string;
+  player4_uni_id_tug_of_war: string;
+
+  player5_name_tug_of_war: string;
+  player5_nic_tug_of_war: string;
+  player5_uni_id_tug_of_war: string;
+
+  player6_name_tug_of_war: string;
+  player6_nic_tug_of_war: string;
+  player6_uni_id_tug_of_war: string;
+
+  player7_name_tug_of_war: string;
+  player7_nic_tug_of_war: string;
+  player7_uni_id_tug_of_war: string;
+
+  player8_name_tug_of_war: string;
+  player8_nic_tug_of_war: string;
+  player8_uni_id_tug_of_war: string;
+
+  sub_1_name_tug_of_war: string;
+  sub_1_nic_tug_of_war: string;
+  sub_1_uni_id_tug_of_war: string;
+
+  sub_2_name_tug_of_war: string;
+  sub_2_nic_tug_of_war: string;
+  sub_2_uni_id_tug_of_war: string;
 }
 
 export const initialGroupFormData: GroupEventInterface = {
   organization: "",
   clubName: "",
   playingCategory: "",
+
   player1_name_100_4: "",
   player1_phone_100_4: "",
   player1_nic_100_4: "",
+  player1_email_100_4: "",
+  player1_uni_id_100_4: "",
   player2_name_100_4: "",
   player2_nic_100_4: "",
+  player2_uni_id_100_4: "",
   player3_name_100_4: "",
   player3_nic_100_4: "",
+  player3_uni_id_100_4: "",
+
+  player4_name_100_4: "",
+  player4_nic_100_4: "",
+  player4_uni_id_100_4: "",
+
   sub_name_100_4: "",
   sub_nic_100_4: "",
+  sub_uni_id_100_4: "",
+
+  player1_name_200_4: "",
+  player1_phone_200_4: "",
+  player1_nic_200_4: "",
+  player1_email_200_4: "",
+  player1_uni_id_200_4: "",
+  player2_name_200_4: "",
+  player2_nic_200_4: "",
+  player2_uni_id_200_4: "",
+  player3_name_200_4: "",
+  player3_nic_200_4: "",
+  player3_uni_id_200_4: "",
+
+  player4_name_200_4: "",
+  player4_nic_200_4: "",
+  player4_uni_id_200_4: "",
+
+  sub_name_200_4: "",
+  sub_nic_200_4: "",
+  sub_uni_id_200_4: "",
+
+  player1_name_100_4_mix: "",
+  player1_phone_100_4_mix: "",
+  player1_nic_100_4_mix: "",
+  player1_email_100_4_mix: "",
+  player1_uni_id_100_4_mix: "",
+  player2_name_100_4_mix: "",
+  player2_nic_100_4_mix: "",
+  player2_uni_id_100_4_mix: "",
+  player3_name_100_4_mix: "",
+  player3_nic_100_4_mix: "",
+  player3_uni_id_100_4_mix: "",
+
+  player4_name_100_4_mix: "",
+  player4_nic_100_4_mix: "",
+  player4_uni_id_100_4_mix: "",
+
+  sub_name_100_4_mix: "",
+  sub_nic_100_4_mix: "",
+  sub_uni_id_100_4_mix: "",
+
+  player1_name_tug_of_war: "",
+  player1_phone_tug_of_war: "",
+  player1_nic_tug_of_war: "",
+  player1_email_tug_of_war: "",
+  player1_uni_id_tug_of_war: "",
+  player2_name_tug_of_war: "",
+  player2_nic_tug_of_war: "",
+  player2_uni_id_tug_of_war: "",
+  player3_name_tug_of_war: "",
+  player3_nic_tug_of_war: "",
+  player3_uni_id_tug_of_war: "",
+
+  player4_name_tug_of_war: "",
+  player4_nic_tug_of_war: "",
+  player4_uni_id_tug_of_war: "",
+
+  player5_name_tug_of_war: "",
+  player5_nic_tug_of_war: "",
+  player5_uni_id_tug_of_war: "",
+
+  player6_name_tug_of_war: "",
+  player6_nic_tug_of_war: "",
+  player6_uni_id_tug_of_war: "",
+
+  player7_name_tug_of_war: "",
+  player7_nic_tug_of_war: "",
+  player7_uni_id_tug_of_war: "",
+
+  player8_name_tug_of_war: "",
+  player8_nic_tug_of_war: "",
+  player8_uni_id_tug_of_war: "",
+
+  sub_1_name_tug_of_war: "",
+  sub_1_nic_tug_of_war: "",
+  sub_1_uni_id_tug_of_war: "",
+
+  sub_2_name_tug_of_war: "",
+  sub_2_nic_tug_of_war: "",
+  sub_2_uni_id_tug_of_war: "",
 };
 
 export const navLinks: Array<NavLink> = [
@@ -203,13 +385,13 @@ export const individualEvents: IndividualEventsInterface = {
 export interface GroupEventsInterface {
   G_100_4: boolean;
   G_200_4: boolean;
-  G_200_4_mix: boolean;
+  G_100_4_mix: boolean;
   G_tug_of_war: boolean;
 }
 
 export const groupEvents: GroupEventsInterface = {
   G_100_4: false,
   G_200_4: false,
-  G_200_4_mix: false,
+  G_100_4_mix: false,
   G_tug_of_war: false,
 };
